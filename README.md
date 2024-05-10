@@ -1,74 +1,42 @@
 MoodleExamenDevOps
 
-clonar el repositorio y el archivo .yml que nos proporciona la pagina de docker hub, se puede copiar y pegar en la terminal para hacer la instalacion
+Examen realizado en una Mac OS
 
-lo primero que se tiene que realizar es bajar de github a local <br> git clone https://github.com/Williampuc/moodlewilliampuc.git 
-<br><br>
-o con el codigo que dan en la pagina de docker hub el cual es <br> curl -sSL https://raw.githubusercontent.com/bitnami/containers/main/bitnami/moodle/docker-compose.yml > docker compose.yml docker compose up -d
-![imagen1](imagenes/imagen1.jepg) <br>
-
-con el comando cd se puede ver que se creo una carpeta con el nombre 
-![imagen2](imagenes/segundo.png) <br>
-
-ahora se comprueba con la ip si se levanto el moodle 
-![imagen4](imagenes/cuarto.png) <br>
-
-ahora ingresamos en moodle y iniciamos sesion can el usuario y la contraseña que son por default <br> usuario:user contraseña:bitnami<br>
-![imagen5](imagenes/quinto.png) <br>
-
-creamos un curso el cual se llamara curso 1
-![imagen6](imagenes/sexto.png) <br>
-
-luego agregamos a los participantes de ese curso
-![imagen7](imagenes/septimo.png) <br>
-
-por ultimo agregamos a los participantes del curso
-![imagen8](imagenes/octavo.png) <br>
-
-# Examen realizado en una Mac OS
-
-¿Qué modelo de Mac? 
-el modelo es una MAC PRO DEL 2019
-<br>
-¿Cuánta memoria RAM tiene?
- cuenta con 96 GB de RAM
-<br>
-¿Qué procesador tiene?
-es un intel xeon W de ocho nucleos a 3.5 GHz
-<br>
+¿Qué modelo de Mac?
+MAC PRO DEL 2019
+¿Cuánta memoria RAM tiene? 
+96 GB de RAM
+¿Qué procesador tiene? 
+intel xeon W de ocho nucleos a 3.5 GHz
 ¿Cuántos núcleos tiene? 
-cuenta con 8 nucleos
-<br>
-¿Cuántos hilos de ejecución tiene?
+ 8 nucleos
+¿Cuántos hilos de ejecución tiene? 
 16 hilos
-<br>
- ¿Qué tarjeta(s) de video tiene?
- tiene un AMD Radeon Pro W5500X
- <br><br>
-![imagen9](capturasdeMAC/primero.jpeg) <br>
+¿Qué tarjeta(s) de video tiene? 
+ AMD Radeon Pro W5500X
 
+Dontenedor de moodle usando docker compose, como configurarlo y agregar usuarios con un curso.
 
- # Examen realizado en MAC
+Primero sera clonar el repositorio y el archivo .yml que nos proporciona la pagina de docker hub, se puede copiar y pegar en la terminal para hacer la instalacion
 
-lo primero que se realiza es el compose
-![imagen10](capturasdeMAC/segundo.jpeg) <br>
+curl -sSL https://raw.githubusercontent.com/bitnami/containers/main/bitnami/moodle/docker-compose.yml > docker-compose.yml
+docker compose up -d
 
-ahora se comprueba con el localhost si se levanto el moodle y se inicia sesion can el usuario y la contraseña que son por default usuario:user contraseña:bitnami
-![imagen11](capturasdeMAC/tercero.jpeg) <br>
+Una vez clonado el repo lo debemos ver levantado usando el comando
 
-ahora creamos un curso con el nombre de curso1
-![imagen12](capturasdeMAC/cuarto.jpeg) <br>
-![imagen13](capturasdeMAC/quinto.jpeg) <br>
+docker ps -a
+en dado caso que no este levantado lo podemos levantar con el comando
 
-ahora agregamos a los usuarios y con el maestro raul caceres usamos como usuario: raul.ca@merida.tecnm.mx y como contraseña:E5un53cr3t0!
-![imagen14](capturasdeMAC/sexto_1.jpeg) <br>
-![imagen15](capturasdeMAC/sexto_2.jpeg) <br>
-![imagen16](capturasdeMAC/sexto_3.jpeg) <br>
-![imagen17](capturasdeMAC/sexto_4.jpeg) <br>
+docker start "ID del contenedor"
+Luego comprabamos que este levantado el servicio de moodle con docker entrando al navegador y poniendo la ip de nuestra maquina donde este montado docker poniendo primero https://myip un ejemplo:
 
-como se puede observar se crearon lo usuarios
-![imagen18](capturasdeMAC/septimo.jpeg) <br>
+https://192.168.56.102
+Para poder entrar como administrador al moodle se tiene el siguiente usuario administrador y contraseña predetermiandos
 
-por ultimo se agregan tres usuarios al curso como alumnos y uno como maestro como se puede observar
-![imagen19](capturasdeMAC/octavo_1.jpeg) <br>
-![imagen20](capturasdeMAC/octavo_2.jpeg) <br>
+user	password
+admi	bitnami
+
+CONCLUSION
+En conclusión, Docker Compose es una herramienta valiosa para simplificar y gestionar entornos multi-contenedor en Docker. Permite definir, configurar y ejecutar aplicaciones compuestas por múltiples servicios de manera eficiente y reproducible. Con su sintaxis declarativa y fácil de entender, Docker Compose facilita la definición de servicios, la gestión de dependencias y la orquestación de contenedores, lo que resulta en un desarrollo más ágil y una implementación consistente de aplicaciones distribuidas. Su capacidad para automatizar la configuración de redes, volúmenes y otros recursos, junto con su soporte para la escalabilidad y la portabilidad, lo convierten en una herramienta indispensable para los desarrolladores y operadores que buscan optimizar el ciclo de vida de sus aplicaciones basadas en contenedores.
+
+imagenes adjuntadas ala carpeta img
