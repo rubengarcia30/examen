@@ -5,7 +5,7 @@ clonar el repositorio y el archivo .yml que nos proporciona la pagina de docker 
 lo primero que se tiene que realizar es bajar de github a local <br> git clone https://github.com/Williampuc/moodlewilliampuc.git 
 <br><br>
 o con el codigo que dan en la pagina de docker hub el cual es <br> curl -sSL https://raw.githubusercontent.com/bitnami/containers/main/bitnami/moodle/docker-compose.yml > docker compose.yml docker compose up -d
-![imagen1](imagenes/primero.png) <br>
+![imagen1](imagenes/imagen1.png) <br>
 
 con el comando cd se puede ver que se creo una carpeta con el nombre 
 ![imagen2](imagenes/segundo.png) <br>
